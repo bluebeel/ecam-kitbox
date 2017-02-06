@@ -1,0 +1,4 @@
+# Treat StarUml diagrams as binary objects
+# avoids having large poluting diffs
+
+*.mdj binary
