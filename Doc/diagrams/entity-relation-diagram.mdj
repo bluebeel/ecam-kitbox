@@ -54,8 +54,7 @@
 									"underline": false,
 									"text": "Product",
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -378,8 +377,7 @@
 									"underline": false,
 									"text": "Provider",
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -582,8 +580,7 @@
 									"underline": false,
 									"text": "Feature Provider",
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -762,8 +759,7 @@
 									"underline": false,
 									"text": "Customer",
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -990,8 +986,7 @@
 									"underline": false,
 									"text": "Worker",
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -1212,14 +1207,13 @@
 									"containerExtending": false,
 									"left": 576,
 									"top": 61,
-									"width": 106,
+									"width": 130,
 									"height": 13,
 									"autoResize": false,
 									"underline": false,
-									"text": "Order",
+									"text": "Purchase",
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -1251,7 +1245,7 @@
 											"containerExtending": false,
 											"left": 581,
 											"top": 84,
-											"width": 96,
+											"width": 120,
 											"height": 13,
 											"autoResize": false
 										},
@@ -1275,7 +1269,7 @@
 											"containerExtending": false,
 											"left": 581,
 											"top": 99,
-											"width": 96,
+											"width": 120,
 											"height": 13,
 											"autoResize": false
 										},
@@ -1299,7 +1293,7 @@
 											"containerExtending": false,
 											"left": 581,
 											"top": 114,
-											"width": 96,
+											"width": 120,
 											"height": 13,
 											"autoResize": false
 										},
@@ -1323,7 +1317,7 @@
 											"containerExtending": false,
 											"left": 581,
 											"top": 129,
-											"width": 96,
+											"width": 120,
 											"height": 13,
 											"autoResize": false
 										},
@@ -1347,7 +1341,7 @@
 											"containerExtending": false,
 											"left": 581,
 											"top": 144,
-											"width": 96,
+											"width": 120,
 											"height": 13,
 											"autoResize": false
 										}
@@ -1363,7 +1357,7 @@
 									"containerExtending": false,
 									"left": 576,
 									"top": 79,
-									"width": 106,
+									"width": 130,
 									"height": 83,
 									"autoResize": false
 								}
@@ -1379,7 +1373,7 @@
 							"containerExtending": false,
 							"left": 576,
 							"top": 56,
-							"width": 106,
+							"width": 130,
 							"height": 106,
 							"autoResize": false,
 							"nameLabel": {
@@ -1416,14 +1410,13 @@
 									"containerExtending": false,
 									"left": 328,
 									"top": 61,
-									"width": 95,
+									"width": 115,
 									"height": 13,
 									"autoResize": false,
 									"underline": false,
 									"text": "OrderItem",
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -1455,7 +1448,7 @@
 											"containerExtending": false,
 											"left": 333,
 											"top": 84,
-											"width": 85,
+											"width": 105,
 											"height": 13,
 											"autoResize": false
 										},
@@ -1479,7 +1472,7 @@
 											"containerExtending": false,
 											"left": 333,
 											"top": 99,
-											"width": 85,
+											"width": 105,
 											"height": 13,
 											"autoResize": false
 										},
@@ -1503,7 +1496,7 @@
 											"containerExtending": false,
 											"left": 333,
 											"top": 114,
-											"width": 85,
+											"width": 105,
 											"height": 13,
 											"autoResize": false
 										},
@@ -1527,7 +1520,7 @@
 											"containerExtending": false,
 											"left": 333,
 											"top": 129,
-											"width": 85,
+											"width": 105,
 											"height": 13,
 											"autoResize": false
 										},
@@ -1551,7 +1544,7 @@
 											"containerExtending": false,
 											"left": 333,
 											"top": 144,
-											"width": 85,
+											"width": 105,
 											"height": 13,
 											"autoResize": false
 										},
@@ -1575,7 +1568,7 @@
 											"containerExtending": false,
 											"left": 333,
 											"top": 159,
-											"width": 85,
+											"width": 105,
 											"height": 13,
 											"autoResize": false
 										}
@@ -1591,7 +1584,7 @@
 									"containerExtending": false,
 									"left": 328,
 									"top": 79,
-									"width": 95,
+									"width": 115,
 									"height": 98,
 									"autoResize": false
 								}
@@ -1607,7 +1600,7 @@
 							"containerExtending": false,
 							"left": 328,
 							"top": 56,
-							"width": 95,
+							"width": 115,
 							"height": 121,
 							"autoResize": false,
 							"nameLabel": {
@@ -1655,8 +1648,7 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -1686,8 +1678,7 @@
 									"edgePosition": 2,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -1717,8 +1708,7 @@
 									"edgePosition": 0,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								}
 							],
 							"visible": true,
@@ -1786,8 +1776,7 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -1817,8 +1806,7 @@
 									"edgePosition": 2,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -1848,8 +1836,7 @@
 									"edgePosition": 0,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								}
 							],
 							"visible": true,
@@ -1917,8 +1904,7 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -1948,8 +1934,7 @@
 									"edgePosition": 2,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -1979,8 +1964,7 @@
 									"edgePosition": 0,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								}
 							],
 							"visible": true,
@@ -2035,7 +2019,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 498,
+									"left": 508,
 									"top": 124,
 									"width": 0,
 									"height": 13,
@@ -2048,8 +2032,7 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -2079,8 +2062,7 @@
 									"edgePosition": 2,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -2097,7 +2079,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 447,
+									"left": 467,
 									"top": 123,
 									"width": 0,
 									"height": 13,
@@ -2110,8 +2092,7 @@
 									"edgePosition": 0,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								}
 							],
 							"visible": true,
@@ -2130,7 +2111,7 @@
 								"$ref": "AAAAAAFaNoSwo9XibjM="
 							},
 							"lineStyle": 2,
-							"points": "576:115;422:115",
+							"points": "576:115;442:115",
 							"nameLabel": {
 								"$ref": "AAAAAAFaRxZQe9k8/LU="
 							},
@@ -2156,8 +2137,8 @@
 							"showShadow": true,
 							"containerChangeable": false,
 							"containerExtending": false,
-							"left": 440,
-							"top": 152,
+							"left": 464,
+							"top": 176,
 							"width": 121,
 							"height": 90,
 							"autoResize": false,
@@ -2186,7 +2167,7 @@
 								"$ref": "AAAAAAFaRxlpsdle8lk="
 							},
 							"lineStyle": 1,
-							"points": "439:157;423:147"
+							"points": "476:175;451:152;443:148"
 						},
 						{
 							"_type": "ERDRelationshipView",
@@ -2226,8 +2207,7 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -2257,8 +2237,7 @@
 									"edgePosition": 2,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -2288,8 +2267,7 @@
 									"edgePosition": 0,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								}
 							],
 							"visible": true,
@@ -2357,8 +2335,7 @@
 									"edgePosition": 1,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -2388,8 +2365,7 @@
 									"edgePosition": 2,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -2419,8 +2395,7 @@
 									"edgePosition": 0,
 									"underline": false,
 									"horizontalAlignment": 2,
-									"verticalAlignment": 5,
-									"wordWrap": false
+									"verticalAlignment": 5
 								}
 							],
 							"visible": true,
@@ -2618,7 +2593,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFaNnWWd9TMUhY="
 							},
-							"name": "Name",
+							"name": "Reference",
 							"length": 0,
 							"primaryKey": false,
 							"foreignKey": false,
@@ -2631,7 +2606,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFaNnWWd9TMUhY="
 							},
-							"name": "Id Product",
+							"name": "Code Product",
 							"length": 0,
 							"primaryKey": false,
 							"foreignKey": false,
@@ -3030,7 +3005,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFaNoGvENV2eUQ="
 							},
-							"name": "Id Product",
+							"name": "Code Product",
 							"length": 0,
 							"primaryKey": false,
 							"foreignKey": false,
@@ -3247,7 +3222,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFaNnVxhdTHOZk="
 					},
-					"name": "Order",
+					"name": "Purchase",
 					"ownedElements": [
 						{
 							"_type": "ERDRelationship",
@@ -3420,7 +3395,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFaNoSwo9XgSBs="
 							},
-							"name": "Date",
+							"name": "Date Order",
 							"length": 0,
 							"primaryKey": false,
 							"foreignKey": false,
@@ -3446,7 +3421,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFaNoSwo9XgSBs="
 							},
-							"name": "Status",
+							"name": "Status purchase",
 							"length": 0,
 							"primaryKey": false,
 							"foreignKey": false,
@@ -3600,7 +3575,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFaNoTX69XtsA4="
 							},
-							"name": "Id Product",
+							"name": "Code Product",
 							"length": 0,
 							"primaryKey": false,
 							"foreignKey": false,
@@ -3647,22 +3622,6 @@
 							"unique": false
 						}
 					]
-				},
-				{
-					"_type": "ERDEntity",
-					"_id": "AAAAAAFaRs69eNemVCU=",
-					"_parent": {
-						"$ref": "AAAAAAFaNnVxhdTHOZk="
-					},
-					"name": "Entity1"
-				},
-				{
-					"_type": "ERDEntity",
-					"_id": "AAAAAAFaRs7ddteyrzI=",
-					"_parent": {
-						"$ref": "AAAAAAFaNnVxhdTHOZk="
-					},
-					"name": "Entity2"
 				},
 				{
 					"_type": "ERDEntity",
@@ -3787,38 +3746,6 @@
 							"unique": false
 						}
 					]
-				},
-				{
-					"_type": "ERDEntity",
-					"_id": "AAAAAAFaRs7uhNfK+Zw=",
-					"_parent": {
-						"$ref": "AAAAAAFaNnVxhdTHOZk="
-					},
-					"name": "Entity4"
-				},
-				{
-					"_type": "ERDEntity",
-					"_id": "AAAAAAFaRs8hm9fWkPA=",
-					"_parent": {
-						"$ref": "AAAAAAFaNnVxhdTHOZk="
-					},
-					"name": "Entity5"
-				},
-				{
-					"_type": "ERDEntity",
-					"_id": "AAAAAAFaRs8lRdfiEiY=",
-					"_parent": {
-						"$ref": "AAAAAAFaNnVxhdTHOZk="
-					},
-					"name": "Entity6"
-				},
-				{
-					"_type": "ERDEntity",
-					"_id": "AAAAAAFaRs8qddfu5vM=",
-					"_parent": {
-						"$ref": "AAAAAAFaNnVxhdTHOZk="
-					},
-					"name": "Entity7"
 				}
 			]
 		}
