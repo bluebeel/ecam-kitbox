@@ -1,0 +1,6 @@
+_minted-main
+*.aux
+*.fdb*
+*.log
+*.fls
+*.gz
