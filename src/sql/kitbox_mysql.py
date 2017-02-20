@@ -1,8 +1,8 @@
 import sqlite3
 import psycopg2
 
-#conn = sqlite3.connect('kitbox.db')
-conn = psycopg2.connect("dbname='kitbox' user='bluebeel' host='localhost'")
+conn = sqlite3.connect('kitbox.db')
+#conn = psycopg2.connect("dbname='kitbox' user='bluebeel' host='localhost'")
 
 cursor = conn.cursor()
 
@@ -46,16 +46,11 @@ CREATE TABLE IF NOT EXISTS customer(
 conn.commit()
 
 cursor.execute("""
-CREATE TYPE purchase_type AS ENUM ('draft', 'deposit', 'paid', 'closed')
-""")
-conn.commit()
-
-cursor.execute("""
 CREATE TABLE IF NOT EXISTS purchase(
-	 id INT PRIMARY KEY UNIQUE,
+      id INT PRIMARY KEY UNIQUE,
      date_order TIMESTAMP,
      id_customer INT,
-     status purchase_type,
+     status ENUM('draft', 'deposit', 'paid', 'closed'),
      price FLOAT,
      FOREIGN KEY (id_customer)
      REFERENCES customer(id_customer)
@@ -79,16 +74,11 @@ CREATE TABLE IF NOT EXISTS feature_provider(
 conn.commit()
 
 cursor.execute("""
-CREATE TYPE orderitem_pos AS ENUM ('left', 'right', 'top', 'bottom', 'back', 'front', 'inner')
-""")
-conn.commit()
-
-cursor.execute("""
 CREATE TABLE IF NOT EXISTS orderitem(
-	 id_order INT,
+      id_order INT,
      nbr_bloc INT,
      code_product VARCHAR(255),
-     type orderitem_pos,
+     type ENUM('left', 'right', 'top', 'bottom', 'back', 'front', 'inner'),
      quantity INT,
      unit_cost FLOAT,
      FOREIGN KEY (id_order) 
