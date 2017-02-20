@@ -2,13 +2,13 @@
 \ProvidesClass{ecam}[2016/10/13 v1.0 ECAM report]
 \LoadClass[a4paper]{report}
 
-\RequirePackage{graphicx} 
-\RequirePackage[a4paper]{geometry}
+\RequirePackage{graphicx}
 \RequirePackage{overpic}
 \RequirePackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \RequirePackage{transparent}
 \RequirePackage{tcolorbox}
 \RequirePackage{titlesec}
+\RequirePackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
 
 \let\@college\@empty
 \let\@degree\@empty
@@ -47,7 +47,7 @@
 		\end{center}
 
   		\null\vfill
-  	
+
 
  	\end{titlepage}
 
@@ -55,4 +55,3 @@
     \fontsize{12pt}{14pt}\selectfont\
 }
 \endinput
-

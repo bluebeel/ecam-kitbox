@@ -48,42 +48,54 @@
 \author{William De Decker \& Mathieu David \& Saïkou Barry Ahmadou \linebreak \& Jonathan Petit \& Momo Guy Donatien}
 \maketitle
 
-\chapter{Introduction}
-Les diagrammes suivants sont les représentations de l'application KitBox fesant l'objet du projet Génie Logiciel. Le diagramme de classe est une représentation de l'intéraction entre les différentes classes du code à venir tandis que les diagrammes de séquence et d'activité offre une vue du déroulement de la réalisation d'une armoire.
-Le diagramme d'entité-relation quant à lui représente les tables dans la base donnée et les relations qu'elles ont entre elles.
-Enfin, vous trouverez à la fin de ce document un diagramme des cas d'utilisations montrant les actions que les différents intervenants pourrons faire au travers notre applications.
-
-
-\pagebreak
 \chapter{Diagrammes}
+Les diagrammes \textit{UML} suivants sont les représentations de notre application
+\textbf{KitBox} fesant l'objet du projet Génie Logiciel.
+
+Le premier diagramme est celui des cas d'utilisations, montrant
+les actions que les différents intervenants pourrons réaliser au travers
+de notre applications.
+
+Le diagramme de classe est la représentation des intéractions entre les
+différentes parties du code. Ce diagramme permet d'avoir une vision global
+des relation entre les classes et des types d'objets.
+
+Le diagramme de séquence permet de se représenter le déroulement de l'action de
+composition d'une armoire sous forme de messages entre les différentes entités
+mises en jeu (systeme, base de donnée et le client). Celui-ci apporte un schéma
+des différentes méthodes qui devront être présent dans l'application. Il est
+complémentaire à notre diagramme de classe.
+
+Le diagramme d'activité métier est la représentation du déroulement général d'une
+commande d'armoir par le client. Il permet d'avoir une vision plus présice des
+actions effectuées par les différents acteurs lors d'une commandes d'une armoire.
+
+Enfin, le diagramme d'entité-relation quant à lui représente les tables dans la base
+donnée et les relations qu'elles ont entre elles.
+
+\section{Diagramme des cas d'utilisation}
+\begin{center}
+\includegraphics[angle=0,scale=0.5]{../images/use-case-diagram.png}
+\end{center}
 
 \section{Diagramme de classe}
-
 \begin{center}
-
-\includegraphics[angle=270,scale=0.3]{../images/class-diagram.png}
+\includegraphics[angle=270,scale=0.35]{../images/class-diagram.png}
 \end{center}
 
 \section{Diagramme de Séquence}
+\begin{center}
+\includegraphics[scale=0.4]{../images/sequence-diagram.png}
+\end{center}
 
 \section{Diagramme d'activité}
-
 \begin{center}
 \includegraphics[angle=0,scale=0.3]{../images/activity-diagram.png}
 \end{center}
 
 \section{Diagramme d'entité-relation}
-
 \begin{center}
-
-\includegraphics[angle=0,scale=0.3]{../images/ERDDiagram.png}
-
-\end{center}
-
-\section{Diagramme des cas d'utilisation}
-\begin{center}
-
-\includegraphics[angle=0,scale=0.3]{../images/use-case-diagram.png}
+\includegraphics[angle=0,scale=0.4]{../images/ERDDiagram.png}
 \end{center}
 
 \end{document}
