@@ -1,14 +1,14 @@
-import sqlite3
+import csv
 import psycopg2
+from itertools import groupby
 
-#conn = sqlite3.connect('kitbox.db')
 conn = psycopg2.connect("dbname='kitbox' user='bluebeel' host='localhost'")
 
 cursor = conn.cursor()
 
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS provider(
-     id INT PRIMARY KEY,
+     id SERIAL PRIMARY KEY NOT NULL,
      name_society VARCHAR(255),
      name_shop VARCHAR(255),
      address VARCHAR(255),
@@ -20,7 +20,7 @@ conn.commit()
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS product(
 	 reference VARCHAR(255),
-     code VARCHAR(255) PRIMARY KEY UNIQUE,
+     code VARCHAR(255) PRIMARY KEY,
      height INT,
      depth INT,
      width INT,
@@ -35,7 +35,7 @@ conn.commit()
 
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS customer(
-     id_customer INT PRIMARY KEY UNIQUE,
+     id SERIAL PRIMARY KEY NOT NULL,
      name VARCHAR(255),
      address VARCHAR(255),
      phone VARCHAR(255),
@@ -45,27 +45,29 @@ CREATE TABLE IF NOT EXISTS customer(
 """)
 conn.commit()
 
+
 cursor.execute("""
 CREATE TYPE purchase_type AS ENUM ('draft', 'deposit', 'paid', 'closed')
 """)
 conn.commit()
 
+
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS purchase(
-	 id INT PRIMARY KEY UNIQUE,
+	id SERIAL PRIMARY KEY NOT NULL,
      date_order TIMESTAMP,
      id_customer INT,
      status purchase_type,
      price FLOAT,
      FOREIGN KEY (id_customer)
-     REFERENCES customer(id_customer)
+     REFERENCES customer(id)
 )
 """)
 conn.commit()
 
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS feature_provider(
-	 id INT PRIMARY KEY,
+	id SERIAL PRIMARY KEY NOT NULL,
      id_provider INT,
      code VARCHAR(255),
      time_provider INT,
@@ -83,9 +85,11 @@ CREATE TYPE orderitem_pos AS ENUM ('left', 'right', 'top', 'bottom', 'back', 'fr
 """)
 conn.commit()
 
+
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS orderitem(
-	 id_order INT,
+     id SERIAL PRIMARY KEY NOT NULL,
+	id_order INT,
      nbr_bloc INT,
      code_product VARCHAR(255),
      type orderitem_pos,
@@ -101,7 +105,7 @@ conn.commit()
 
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS worker(
-     id INT PRIMARY KEY UNIQUE,
+     id SERIAL PRIMARY KEY UNIQUE NOT NULL,
      name VARCHAR(255),
      address VARCHAR(255),
      phone VARCHAR(255),
@@ -111,4 +115,42 @@ CREATE TABLE IF NOT EXISTS worker(
 """)
 conn.commit()
 
-with 
+with open('kitbox.csv') as csvfile:
+     spamreader = csv.reader(csvfile, delimiter=';')
+     csv_doc = list(spamreader)[1:]
+     csvfile.close()
+
+query = "INSERT INTO product (reference, code, height, depth, width, color, stock, stock_min, price, piece_per_bloc) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+
+insert = []
+for row in csv_doc:
+     insert.append((row[0], row[1], int(row[2]), int(row[3]), int(row[4]), row[5], int(row[6]), int(row[7]), float(row[8].replace(',', '.')), int(row[9])))
+
+cursor.executemany(query, tuple(insert))
+conn.commit()
+
+with open('fournisseurs.txt', 'r') as f:
+     doc = [word.strip() for word in f.readlines()]
+     doc_filtered = list(filter(None, doc))
+     final = [list(g) for k, g in groupby(doc_filtered, lambda x: '------' not in x and 'Fournisseur' not in x) if k]
+     f.close()
+
+query = "INSERT INTO provider (name_society, name_shop, address, city) VALUES (%s, %s, %s, %s)"
+insert = []
+
+for provider in final:
+     insert.append((provider[0], provider[1], provider[2], provider[3]))
+
+cursor.executemany(query, tuple(insert))
+conn.commit()
+
+query = "INSERT INTO feature_provider (id_provider, code, time_provider, price_provider) VALUES (%s, %s, %s, %s)"
+insert = []
+
+for row in csv_doc:
+     insert.append((1, row[1], int(row[11]), float(row[10].replace(',', '.'))))
+     insert.append((2, row[1], int(row[13]), float(row[12].replace(',', '.'))))
+
+cursor.executemany(query, tuple(insert))
+conn.commit()
+
