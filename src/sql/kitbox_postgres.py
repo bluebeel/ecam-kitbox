@@ -1,14 +1,16 @@
 import csv
+import sys
 import psycopg2
 from itertools import groupby
 
+
 def Postgres(user, db):
 
-     conn = psycopg2.connect("dbname='{}' user='{}' host='localhost'".format(db, user))
+    conn = psycopg2.connect("dbname='{}' user='{}' host='localhost'".format(db, user))
 
-     cursor = conn.cursor()
+    cursor = conn.cursor()
 
-     cursor.execute("""
+    cursor.execute("""
      CREATE TABLE IF NOT EXISTS provider(
           id SERIAL PRIMARY KEY NOT NULL,
           name_society VARCHAR(255),
@@ -17,9 +19,9 @@ def Postgres(user, db):
           city VARCHAR(255)
      )
      """)
-     conn.commit()
+    conn.commit()
 
-     cursor.execute("""
+    cursor.execute("""
      CREATE TABLE IF NOT EXISTS product(
      	 reference VARCHAR(255),
           code VARCHAR(255) PRIMARY KEY,
@@ -33,9 +35,9 @@ def Postgres(user, db):
           piece_per_bloc INT
      )
      """)
-     conn.commit()
+    conn.commit()
 
-     cursor.execute("""
+    cursor.execute("""
      CREATE TABLE IF NOT EXISTS customer(
           id SERIAL PRIMARY KEY NOT NULL,
           name VARCHAR(255),
@@ -45,16 +47,14 @@ def Postgres(user, db):
           password VARCHAR(255)
      )
      """)
-     conn.commit()
+    conn.commit()
 
-
-     cursor.execute("""
+    cursor.execute("""
      CREATE TYPE purchase_type AS ENUM ('draft', 'deposit', 'paid', 'closed')
      """)
-     conn.commit()
+    conn.commit()
 
-
-     cursor.execute("""
+    cursor.execute("""
      CREATE TABLE IF NOT EXISTS purchase(
      	id SERIAL PRIMARY KEY NOT NULL,
           date_order TIMESTAMP,
@@ -65,9 +65,9 @@ def Postgres(user, db):
           REFERENCES customer(id)
      )
      """)
-     conn.commit()
+    conn.commit()
 
-     cursor.execute("""
+    cursor.execute("""
      CREATE TABLE IF NOT EXISTS feature_provider(
      	id SERIAL PRIMARY KEY NOT NULL,
           id_provider INT,
@@ -80,15 +80,14 @@ def Postgres(user, db):
           REFERENCES provider(id)
      )
      """)
-     conn.commit()
+    conn.commit()
 
-     cursor.execute("""
+    cursor.execute("""
      CREATE TYPE orderitem_pos AS ENUM ('left', 'right', 'top', 'bottom', 'back', 'front', 'inner')
      """)
-     conn.commit()
+    conn.commit()
 
-
-     cursor.execute("""
+    cursor.execute("""
      CREATE TABLE IF NOT EXISTS orderitem(
           id SERIAL PRIMARY KEY NOT NULL,
      	id_order INT,
@@ -97,15 +96,15 @@ def Postgres(user, db):
           type orderitem_pos,
           quantity INT,
           unit_cost FLOAT,
-          FOREIGN KEY (id_order) 
+          FOREIGN KEY (id_order)
           REFERENCES purchase(id),
-          FOREIGN KEY (code_product) 
+          FOREIGN KEY (code_product)
           REFERENCES product(code)
      )
      """)
-     conn.commit()
+    conn.commit()
 
-     cursor.execute("""
+    cursor.execute("""
      CREATE TABLE IF NOT EXISTS worker(
           id SERIAL PRIMARY KEY UNIQUE NOT NULL,
           name VARCHAR(255),
@@ -115,46 +114,49 @@ def Postgres(user, db):
           password VARCHAR(255)
      )
      """)
-     conn.commit()
+    conn.commit()
 
-     with open('kitbox.csv') as csvfile:
-          spamreader = csv.reader(csvfile, delimiter=';')
-          csv_doc = list(spamreader)[1:]
-          csvfile.close()
+    with open('kitbox.csv') as csvfile:
+        spamreader = csv.reader(csvfile, delimiter=';')
+        csv_doc = list(spamreader)[1:]
+        csvfile.close()
 
-     query = "INSERT INTO product (reference, code, height, depth, width, color, stock, stock_min, price, piece_per_bloc) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    query = """INSERT INTO product (reference, code, height, depth, width, color, stock, stock_min, price, piece_per_bloc)
+    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
 
-     insert = []
-     for row in csv_doc:
-          insert.append((row[0], row[1], int(row[2]), int(row[3]), int(row[4]), row[5], int(row[6]), int(row[7]), float(row[8].replace(',', '.')), int(row[9])))
+    insert = []
+    for row in csv_doc:
+        insert.append((row[0], row[1], int(row[2]), int(row[3]), int(row[4]), row[5],
+                       int(row[6]), int(row[7]), float(row[8].replace(',', '.')), int(row[9])))
 
-     cursor.executemany(query, tuple(insert))
-     conn.commit()
+    cursor.executemany(query, tuple(insert))
+    conn.commit()
 
-     with open('fournisseurs.txt', 'r') as f:
-          doc = [word.strip() for word in f.readlines()]
-          doc_filtered = list(filter(None, doc))
-          final = [list(g) for k, g in groupby(doc_filtered, lambda x: '------' not in x and 'Fournisseur' not in x) if k]
-          f.close()
+    with open('fournisseurs.txt', 'r') as f:
+        doc = [word.strip() for word in f.readlines()]
+        doc_filtered = list(filter(None, doc))
+        final = [list(g) for k, g in groupby(doc_filtered, lambda x: '------' not in x and 'Fournisseur' not in x) if k]
+        f.close()
 
-     query = "INSERT INTO provider (name_society, name_shop, address, city) VALUES (%s, %s, %s, %s)"
-     insert = []
+    query = "INSERT INTO provider (name_society, name_shop, address, city) VALUES (%s, %s, %s, %s)"
+    insert = []
 
-     for provider in final:
-          insert.append((provider[0], provider[1], provider[2], provider[3]))
+    for provider in final:
+        insert.append((provider[0], provider[1], provider[2], provider[3]))
 
-     cursor.executemany(query, tuple(insert))
-     conn.commit()
+    cursor.executemany(query, tuple(insert))
+    conn.commit()
 
-     query = "INSERT INTO feature_provider (id_provider, code, time_provider, price_provider) VALUES (%s, %s, %s, %s)"
-     insert = []
+    query = "INSERT INTO feature_provider (id_provider, code, time_provider, price_provider) VALUES (%s, %s, %s, %s)"
+    insert = []
 
-     for row in csv_doc:
-          insert.append((1, row[1], int(row[11]), float(row[10].replace(',', '.'))))
-          insert.append((2, row[1], int(row[13]), float(row[12].replace(',', '.'))))
+    for row in csv_doc:
+        insert.append((1, row[1], int(row[11]), float(row[10].replace(',', '.'))))
+        insert.append((2, row[1], int(row[13]), float(row[12].replace(',', '.'))))
 
-     cursor.executemany(query, tuple(insert))
-     conn.commit()
+    cursor.executemany(query, tuple(insert))
+    conn.commit()
+
 
 if __name__ == '__main__':
 
