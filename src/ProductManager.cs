@@ -46,10 +46,11 @@ namespace kitbox
 				Product product = new Product((string)reader["reference"], (string)reader["code"], specs, color, (int)reader["stock"], (int)reader["stock_min"], (double)reader["price"], (int)reader["piece_per_bloc"]);
 				products.Add(product);
 			}
+
+			reader.Close();
 			this.connection.Close();
 
 			return products;
-
 		}
 	}
 }

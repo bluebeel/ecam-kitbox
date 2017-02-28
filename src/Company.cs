@@ -6,6 +6,7 @@ namespace kitbox
 	public class Company
 	{
 		private ProductManager productManager;
+		private CustomerManager customerManager;
 		private NpgsqlConnection connection;
 
 		private NpgsqlConnection Init(string host, string db, string user)
@@ -28,11 +29,17 @@ namespace kitbox
 				throw e;
 			}
 			this.productManager = new ProductManager(this.connection);
+			this.customerManager = new CustomerManager(this.connection);
 		}
 
 		public ProductManager ProductManager
 		{
 			get { return this.productManager; }
+		}
+
+		public CustomerManager CustomerManager
+		{
+			get { return this.customerManager; }
 		}
 	}
 }
