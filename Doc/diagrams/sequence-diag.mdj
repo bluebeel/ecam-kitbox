@@ -25,7 +25,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFaWsdmmiLzfrs="
 							},
-							"name": "SequenceDiagram1",
+							"name": "Order sequence",
 							"visible": true,
 							"defaultDiagram": false,
 							"ownedViews": [
@@ -54,16 +54,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 86.97900390625,
+											"left": 87,
 											"top": 5,
-											"width": 115.9052734375,
+											"width": 93,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "SequenceDiagram1",
+											"text": "Order sequence",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "LabelView",
@@ -82,14 +81,13 @@
 											"containerExtending": false,
 											"left": 21,
 											"top": 5,
-											"width": 60.97900390625,
+											"width": 61,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "interaction",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										}
 									],
 									"visible": true,
@@ -155,8 +153,7 @@
 													"autoResize": false,
 													"underline": false,
 													"horizontalAlignment": 2,
-													"verticalAlignment": 5,
-													"wordWrap": false
+													"verticalAlignment": 5
 												},
 												{
 													"_type": "LabelView",
@@ -181,8 +178,7 @@
 													"underline": false,
 													"text": "Client",
 													"horizontalAlignment": 2,
-													"verticalAlignment": 5,
-													"wordWrap": false
+													"verticalAlignment": 5
 												},
 												{
 													"_type": "LabelView",
@@ -207,8 +203,7 @@
 													"underline": false,
 													"text": "(from Interaction1)",
 													"horizontalAlignment": 2,
-													"verticalAlignment": 5,
-													"wordWrap": false
+													"verticalAlignment": 5
 												},
 												{
 													"_type": "LabelView",
@@ -232,8 +227,7 @@
 													"autoResize": false,
 													"underline": false,
 													"horizontalAlignment": 1,
-													"verticalAlignment": 5,
-													"wordWrap": false
+													"verticalAlignment": 5
 												}
 											],
 											"visible": true,
@@ -357,8 +351,7 @@
 													"autoResize": false,
 													"underline": false,
 													"horizontalAlignment": 2,
-													"verticalAlignment": 5,
-													"wordWrap": false
+													"verticalAlignment": 5
 												},
 												{
 													"_type": "LabelView",
@@ -383,8 +376,7 @@
 													"underline": false,
 													"text": "System",
 													"horizontalAlignment": 2,
-													"verticalAlignment": 5,
-													"wordWrap": false
+													"verticalAlignment": 5
 												},
 												{
 													"_type": "LabelView",
@@ -409,8 +401,7 @@
 													"underline": false,
 													"text": "(from Interaction1)",
 													"horizontalAlignment": 2,
-													"verticalAlignment": 5,
-													"wordWrap": false
+													"verticalAlignment": 5
 												},
 												{
 													"_type": "LabelView",
@@ -434,8 +425,7 @@
 													"autoResize": false,
 													"underline": false,
 													"horizontalAlignment": 1,
-													"verticalAlignment": 5,
-													"wordWrap": false
+													"verticalAlignment": 5
 												}
 											],
 											"visible": true,
@@ -559,8 +549,7 @@
 													"autoResize": false,
 													"underline": false,
 													"horizontalAlignment": 2,
-													"verticalAlignment": 5,
-													"wordWrap": false
+													"verticalAlignment": 5
 												},
 												{
 													"_type": "LabelView",
@@ -585,8 +574,7 @@
 													"underline": false,
 													"text": "Database",
 													"horizontalAlignment": 2,
-													"verticalAlignment": 5,
-													"wordWrap": false
+													"verticalAlignment": 5
 												},
 												{
 													"_type": "LabelView",
@@ -611,8 +599,7 @@
 													"underline": false,
 													"text": "(from Interaction1)",
 													"horizontalAlignment": 2,
-													"verticalAlignment": 5,
-													"wordWrap": false
+													"verticalAlignment": 5
 												},
 												{
 													"_type": "LabelView",
@@ -636,8 +623,7 @@
 													"autoResize": false,
 													"underline": false,
 													"horizontalAlignment": 1,
-													"verticalAlignment": 5,
-													"wordWrap": false
+													"verticalAlignment": 5
 												}
 											],
 											"visible": true,
@@ -744,15 +730,14 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 160.72998046875,
+											"left": 161,
 											"top": 101,
 											"width": 1,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "LabelView",
@@ -771,14 +756,13 @@
 											"containerExtending": false,
 											"left": 141,
 											"top": 101,
-											"width": 14.72998046875,
+											"width": 15,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "alt",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLInteractionOperandCompartmentView",
@@ -822,8 +806,7 @@
 															"autoResize": false,
 															"underline": false,
 															"horizontalAlignment": 2,
-															"verticalAlignment": 5,
-															"wordWrap": false
+															"verticalAlignment": 5
 														}
 													],
 													"visible": true,
@@ -876,8 +859,7 @@
 															"autoResize": false,
 															"underline": false,
 															"horizontalAlignment": 2,
-															"verticalAlignment": 5,
-															"wordWrap": false
+															"verticalAlignment": 5
 														}
 													],
 													"visible": true,
@@ -954,12 +936,12 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 136,
-									"top": 112,
+									"left": 176,
+									"top": 96,
 									"width": 89,
 									"height": 38,
 									"autoResize": false,
-									"text": "New user",
+									"text": "[New user]",
 									"wordWrap": true
 								},
 								{
@@ -979,10 +961,10 @@
 									"containerExtending": false,
 									"left": 136,
 									"top": 232,
-									"width": 89,
+									"width": 121,
 									"height": 38,
 									"autoResize": false,
-									"text": "existing user",
+									"text": "[existing user]",
 									"wordWrap": true
 								},
 								{
@@ -1013,9 +995,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 287,
+											"left": 286,
 											"top": 128,
-											"width": 91.04443359375,
+											"width": 92,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -1027,8 +1009,7 @@
 											"underline": false,
 											"text": "1 : User sign up",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1061,8 +1042,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1095,8 +1075,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -1183,13 +1162,13 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 464,
+											"left": 480,
 											"top": 155,
-											"width": 143.076171875,
+											"width": 145,
 											"height": 13,
 											"autoResize": false,
-											"alpha": 1.5871872984161748,
-											"distance": 61.00819617067857,
+											"alpha": 1.5836151356244121,
+											"distance": 78.00640999302557,
 											"hostEdge": {
 												"$ref": "AAAAAAFaWxvMPijkAL0="
 											},
@@ -1197,8 +1176,7 @@
 											"underline": false,
 											"text": "2 : Check the credentials",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1231,8 +1209,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1265,8 +1242,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -1353,9 +1329,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 481,
+											"left": 480,
 											"top": 200,
-											"width": 169.1142578125,
+											"width": 171,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -1367,8 +1343,7 @@
 											"underline": false,
 											"text": "3 : Save user in the database",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1401,8 +1376,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1435,8 +1409,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -1523,9 +1496,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 290,
+											"left": 289,
 											"top": 248,
-											"width": 84.54443359375,
+											"width": 86,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -1537,8 +1510,7 @@
 											"underline": false,
 											"text": "4 : user sign in",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1571,8 +1543,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1605,8 +1576,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -1693,9 +1663,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 473,
+											"left": 471,
 											"top": 272,
-											"width": 178.4833984375,
+											"width": 183,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -1707,8 +1677,7 @@
 											"underline": false,
 											"text": "5 : ask if user exist in database",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1741,8 +1710,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1775,8 +1743,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -1863,9 +1830,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 474,
+											"left": 472,
 											"top": 311,
-											"width": 181.365234375,
+											"width": 185,
 											"height": 13,
 											"autoResize": false,
 											"alpha": -1.4711286644028423,
@@ -1877,8 +1844,7 @@
 											"underline": false,
 											"text": "6 : return the user object if exist",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1911,8 +1877,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1945,8 +1910,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -2033,13 +1997,13 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 455,
+											"left": 480,
 											"top": 370,
-											"width": 208.8251953125,
+											"width": 209,
 											"height": 13,
 											"autoResize": false,
-											"alpha": 1.5943203950134794,
-											"distance": 85.0235261559999,
+											"alpha": 1.5889751402155288,
+											"distance": 110.01818031580054,
 											"hostEdge": {
 												"$ref": "AAAAAAFaWvElfigaj5Q="
 											},
@@ -2047,8 +2011,7 @@
 											"underline": false,
 											"text": "7 : create new order with credentials",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2081,8 +2044,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2115,8 +2077,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -2205,7 +2166,7 @@
 											"containerExtending": false,
 											"left": 253,
 											"top": 408,
-											"width": 150.31884765625,
+											"width": 150,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -2217,8 +2178,7 @@
 											"underline": false,
 											"text": "8 : create a new cupboard",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2251,8 +2211,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2285,8 +2244,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -2373,13 +2331,13 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 252,
-											"top": 454,
-											"width": 161.14794921875,
+											"left": 247,
+											"top": 447,
+											"width": 164,
 											"height": 13,
 											"autoResize": false,
-											"alpha": 4.71238648038469,
-											"distance": 4,
+											"alpha": -1.2793404497484744,
+											"distance": 10.44030650891055,
 											"hostEdge": {
 												"$ref": "AAAAAAFaWvkfkyZHUAs="
 											},
@@ -2387,8 +2345,7 @@
 											"underline": false,
 											"text": "9 : ask the base dimensions",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2421,8 +2378,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2455,8 +2411,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -2542,14 +2497,13 @@
 											"containerExtending": false,
 											"left": 187,
 											"top": 533,
-											"width": 25.578125,
+											"width": 25,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "loop",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "LabelView",
@@ -2573,8 +2527,7 @@
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										}
 									],
 									"visible": true,
@@ -2649,9 +2602,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 257,
+											"left": 256,
 											"top": 490,
-											"width": 143.076171875,
+											"width": 145,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -2663,8 +2616,7 @@
 											"underline": false,
 											"text": "10 : Give the dimensions",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2697,8 +2649,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2731,8 +2682,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -2819,13 +2769,13 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 263,
-											"top": 567,
-											"width": 127.9306640625,
+											"left": 262,
+											"top": 559,
+											"width": 129,
 											"height": 13,
 											"autoResize": false,
-											"alpha": -1.1071507177960909,
-											"distance": 4.47213595499958,
+											"alpha": -1.4056484601911903,
+											"distance": 12.165525060596439,
 											"hostEdge": {
 												"$ref": "AAAAAAFaWwEudSaEazc="
 											},
@@ -2833,8 +2783,7 @@
 											"underline": false,
 											"text": "11 : choose the height",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2867,8 +2816,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2901,8 +2849,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -2989,9 +2936,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 257,
+											"left": 256,
 											"top": 600,
-											"width": 143.076171875,
+											"width": 145,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -3003,8 +2950,7 @@
 											"underline": false,
 											"text": "12 : Give the dimensions",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3037,8 +2983,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3071,8 +3016,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -3159,13 +3103,13 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 232,
+											"left": 231,
 											"top": 640,
-											"width": 195.84423828125,
+											"width": 198,
 											"height": 13,
 											"autoResize": false,
-											"alpha": 4.612719337794616,
-											"distance": 10.04987562112089,
+											"alpha": 4.514992458996533,
+											"distance": 10.198039027185569,
 											"hostEdge": {
 												"$ref": "AAAAAAFaWwIwCyay7uc="
 											},
@@ -3173,8 +3117,7 @@
 											"underline": false,
 											"text": "13 : choose the different elements",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3207,8 +3150,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3241,8 +3183,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -3329,9 +3270,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 238,
+											"left": 237,
 											"top": 680,
-											"width": 180.654296875,
+											"width": 183,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -3343,8 +3284,7 @@
 											"underline": false,
 											"text": "14 : Give the different elements",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3377,8 +3317,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3411,8 +3350,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -3499,9 +3437,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 277,
+											"left": 276,
 											"top": 743,
-											"width": 106.9326171875,
+											"width": 108,
 											"height": 13,
 											"autoResize": false,
 											"alpha": -1.3734017284836622,
@@ -3513,8 +3451,7 @@
 											"underline": false,
 											"text": "15 : Give overview",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3547,8 +3484,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3581,8 +3517,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -3669,9 +3604,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 275,
+											"left": 274,
 											"top": 783,
-											"width": 96.103515625,
+											"width": 98,
 											"height": 13,
 											"autoResize": false,
 											"alpha": -0.8850673604433084,
@@ -3683,8 +3618,7 @@
 											"underline": false,
 											"text": "16 : Give invoice",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3717,8 +3651,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3751,8 +3684,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -3839,9 +3771,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 495,
+											"left": 492,
 											"top": 800,
-											"width": 140.8798828125,
+											"width": 146,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -3853,8 +3785,7 @@
 											"underline": false,
 											"text": "17 : Verify items in stock",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3887,8 +3818,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3921,8 +3851,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -4009,9 +3938,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 489,
+											"left": 487,
 											"top": 839,
-											"width": 151.734375,
+											"width": 155,
 											"height": 13,
 											"autoResize": false,
 											"alpha": -1.4711286644028423,
@@ -4023,8 +3952,7 @@
 											"underline": false,
 											"text": "18 : Give the current stock",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4057,8 +3985,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4091,8 +4018,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -4179,9 +4105,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 289,
+											"left": 287,
 											"top": 943,
-											"width": 85.99169921875,
+											"width": 89,
 											"height": 13,
 											"autoResize": false,
 											"alpha": -1.4711286644028423,
@@ -4193,8 +4119,7 @@
 											"underline": false,
 											"text": "19 : Ask to pay",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4227,8 +4152,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4261,8 +4185,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -4349,9 +4272,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 290,
+											"left": 308,
 											"top": 976,
-											"width": 85.2744140625,
+											"width": 49,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -4363,8 +4286,7 @@
 											"underline": false,
 											"text": "20 : Pay",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4397,8 +4319,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4431,8 +4352,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -4516,15 +4436,14 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 120.72998046875,
+											"left": 121,
 											"top": 901,
 											"width": 1,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "LabelView",
@@ -4543,14 +4462,13 @@
 											"containerExtending": false,
 											"left": 101,
 											"top": 901,
-											"width": 14.72998046875,
+											"width": 15,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "alt",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLInteractionOperandCompartmentView",
@@ -4594,8 +4512,7 @@
 															"autoResize": false,
 															"underline": false,
 															"horizontalAlignment": 2,
-															"verticalAlignment": 5,
-															"wordWrap": false
+															"verticalAlignment": 5
 														}
 													],
 													"visible": true,
@@ -4648,8 +4565,7 @@
 															"autoResize": false,
 															"underline": false,
 															"horizontalAlignment": 2,
-															"verticalAlignment": 5,
-															"wordWrap": false
+															"verticalAlignment": 5
 														}
 													],
 													"visible": true,
@@ -4726,7 +4642,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 152,
+									"left": 136,
 									"top": 896,
 									"width": 65,
 									"height": 38,
@@ -4749,7 +4665,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 112,
+									"left": 96,
 									"top": 1048,
 									"width": 97,
 									"height": 38,
@@ -4785,9 +4701,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 450,
+											"left": 449,
 											"top": 1008,
-											"width": 231.27685546875,
+											"width": 232,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -4799,8 +4715,7 @@
 											"underline": false,
 											"text": "21 : Save the paid order in the database",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4833,8 +4748,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4867,8 +4781,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -4955,9 +4868,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 280,
+											"left": 278,
 											"top": 1103,
-											"width": 103.33984375,
+											"width": 106,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -4969,8 +4882,7 @@
 											"underline": false,
 											"text": "22 : Ask a deposit",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5003,8 +4915,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5037,8 +4948,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -5125,9 +5035,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 284,
+											"left": 283,
 											"top": 1143,
-											"width": 97.55712890625,
+											"width": 99,
 											"height": 13,
 											"autoResize": false,
 											"alpha": -1.5707956125091824,
@@ -5139,8 +5049,7 @@
 											"underline": false,
 											"text": "23 : Give deposit",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5173,8 +5082,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5207,8 +5115,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -5295,9 +5202,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 464,
+											"left": 463,
 											"top": 1160,
-											"width": 203.0869140625,
+											"width": 204,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -5309,8 +5216,7 @@
 											"underline": false,
 											"text": "24 : Save the order in the database",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5343,8 +5249,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5377,8 +5282,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -5465,13 +5369,13 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 23,
+											"left": 263,
 											"top": 1218,
-											"width": 226.18603515625,
+											"width": 226,
 											"height": 13,
 											"autoResize": false,
-											"alpha": -1.5795690324087477,
-											"distance": 114.00438588054409,
+											"alpha": 1.586667008527241,
+											"distance": 126.01587201618692,
 											"hostEdge": {
 												"$ref": "AAAAAAFaWxTGuSguNXo="
 											},
@@ -5479,8 +5383,7 @@
 											"underline": false,
 											"text": "25 : Wait until order has been delivered",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5513,8 +5416,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5547,8 +5449,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -5635,9 +5536,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 288,
+											"left": 286,
 											"top": 1264,
-											"width": 88.8798828125,
+											"width": 92,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -5649,8 +5550,7 @@
 											"underline": false,
 											"text": "26 : Pay totality",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5683,8 +5583,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5717,8 +5616,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -5805,9 +5703,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 451,
+											"left": 450,
 											"top": 1289,
-											"width": 229.82958984375,
+											"width": 231,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -5819,8 +5717,7 @@
 											"underline": false,
 											"text": "27 : update the order status in database",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5853,8 +5750,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5887,8 +5783,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -5975,9 +5870,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 277,
+											"left": 276,
 											"top": 1372,
-											"width": 108.38623046875,
+											"width": 110,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -5989,8 +5884,7 @@
 											"underline": false,
 											"text": "28 : Give elements",
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -6023,8 +5917,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -6057,8 +5950,7 @@
 											"edgePosition": 1,
 											"underline": false,
 											"horizontalAlignment": 2,
-											"verticalAlignment": 5,
-											"wordWrap": false
+											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLActivationView",
@@ -6869,6 +6761,7 @@
 					"visibility": "public",
 					"isStatic": false,
 					"isLeaf": false,
+					"type": "",
 					"isReadOnly": false,
 					"isOrdered": false,
 					"isUnique": false,
@@ -6886,6 +6779,7 @@
 					"visibility": "public",
 					"isStatic": false,
 					"isLeaf": false,
+					"type": "",
 					"isReadOnly": false,
 					"isOrdered": false,
 					"isUnique": false,
@@ -6903,6 +6797,7 @@
 					"visibility": "public",
 					"isStatic": false,
 					"isLeaf": false,
+					"type": "",
 					"isReadOnly": false,
 					"isOrdered": false,
 					"isUnique": false,
