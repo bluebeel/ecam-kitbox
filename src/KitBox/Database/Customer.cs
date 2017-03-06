@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace KitBox
 {
@@ -32,7 +33,7 @@ namespace KitBox
 		{
 			get { return this.password; }
 
-			set { this.password = value; }
+            set { this.password = hash(value); }
 		}
 
 		public string Name
@@ -74,5 +75,18 @@ namespace KitBox
 				} 
 			}
 		}
+
+
+
+        private string hash(string pswd)
+        {
+            var bytes = new UTF8Encoding().GetBytes(pswd);
+            byte[] hashBytes;
+            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            {
+                hashBytes = algorithm.ComputeHash(bytes);
+            }
+            return Convert.ToBase64String(hashBytes);
+        }
 	}
 }
