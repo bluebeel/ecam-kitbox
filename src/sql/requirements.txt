@@ -1,0 +1,5 @@
+Install Pymysql:
+Pip install pymysql
+
+Run the script:
+python kitbox_mysql.py user pwd db_name port
