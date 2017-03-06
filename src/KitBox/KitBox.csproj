@@ -45,7 +45,7 @@
     <Compile Include="Block\Containers\HorizontalElements.cs" />
     <Compile Include="Block\Containers\InnerElements.cs" />
     <Compile Include="Block\Interfaces\IProduct.cs" />
-    <Compile Include="Block\Interfaces\IFrontInterface.cs" />
+    <Compile Include="Block\Interfaces\IFrontElement.cs" />
     <Compile Include="Block\Interfaces\IBackElement.cs" />
     <Compile Include="Block\Interfaces\ISideElement.cs" />
     <Compile Include="Block\Interfaces\IHorizontalElement.cs" />
@@ -55,6 +55,12 @@
     <Compile Include="Database\ProductManager.cs" />
     <Compile Include="Database\Customer.cs" />
     <Compile Include="Database\StockProduct.cs" />
+    <Compile Include="Block\Pieces\Track.cs" />
+    <Compile Include="Block\Pieces\Cleat.cs" />
+    <Compile Include="Block\Pieces\GlassDoor.cs" />
+    <Compile Include="Block\Pieces\ClassicDoor.cs" />
+    <Compile Include="Block\Pieces\TrackOneRail.cs" />
+    <Compile Include="Block\Pieces\TrackTwoRails.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />

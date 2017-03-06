@@ -1,7 +1,7 @@
 ﻿using System;
 namespace KitBox
 {
-    public interface IFrontInterface : IProduct
+    public interface IFrontElement : IProduct
     {
     }
 }
