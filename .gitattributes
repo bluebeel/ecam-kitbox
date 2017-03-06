@@ -2,3 +2,6 @@
 # avoids having large poluting diffs
 
 *.mdj binary
+
+*.csproj -text merge=union
+*.sln -text merge=union
