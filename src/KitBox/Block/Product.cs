@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace KitBox
 {
-    public class Product : IProduct
+    public abstract class Product : IProduct
     {
         private decimal price;
         private Dimensions dimensions;
