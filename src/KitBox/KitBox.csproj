@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{5E1FD4DB-BF96-469C-93B8-AC52E3EA790A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>KitBox</RootNamespace>
+    <AssemblyName>KitBox</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Block\" />
+    <Folder Include="Block\Pieces\" />
+    <Folder Include="Block\Containers\" />
+    <Folder Include="Block\Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Block\Product.cs" />
+    <Compile Include="Block\Dimensions.cs" />
+    <Compile Include="Block\Pieces\Door.cs" />
+    <Compile Include="Block\Pieces\Slot.cs" />
+    <Compile Include="Block\Pieces\Panel.cs" />
+    <Compile Include="Block\Block.cs" />
+    <Compile Include="Block\Containers\FrontElements.cs" />
+    <Compile Include="Block\Containers\BackElements.cs" />
+    <Compile Include="Block\Containers\SideElements.cs" />
+    <Compile Include="Block\Containers\HorizontalElements.cs" />
+    <Compile Include="Block\Containers\InnerElements.cs" />
+    <Compile Include="Block\Interfaces\IProduct.cs" />
+    <Compile Include="Block\Interfaces\IFrontInterface.cs" />
+    <Compile Include="Block\Interfaces\IBackElement.cs" />
+    <Compile Include="Block\Interfaces\ISideElement.cs" />
+    <Compile Include="Block\Interfaces\IHorizontalElement.cs" />
+    <Compile Include="Block\Interfaces\IInnerElement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
