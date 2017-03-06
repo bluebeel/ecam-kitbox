@@ -53,6 +53,9 @@
     <Compile Include="Database\Company.cs" />
     <Compile Include="Database\CustomerManager.cs" />
     <Compile Include="Database\ProductManager.cs" />
+    <Compile Include="Database\Customer.cs" />
+    <Compile Include="Database\StockProduct.cs" />
+    <Compile Include="main.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />

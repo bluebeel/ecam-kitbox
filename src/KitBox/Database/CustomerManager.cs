@@ -1,5 +1,6 @@
 ﻿using System;
 using Npgsql;
+using NpgsqlTypes;
 using System.Collections.Generic;
 
 namespace KitBox
