@@ -1,9 +1,8 @@
 ﻿using System;
 using Npgsql;
-using NpgsqlTypes;
 using System.Collections.Generic;
 
-namespace kitbox
+namespace KitBox
 {
 	public class CustomerManager
 	{

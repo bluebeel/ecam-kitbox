@@ -2,7 +2,7 @@
 using Npgsql;
 using System.Collections.Generic;
 
-namespace kitbox
+namespace KitBox
 {
 	public class ProductManager
 	{

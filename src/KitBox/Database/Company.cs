@@ -1,7 +1,7 @@
 ﻿using System;
 using Npgsql;
 
-namespace kitbox
+namespace KitBox
 {
 	public class Company
 	{
