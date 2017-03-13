@@ -1,162 +1,165 @@
+import csv
+import psycopg2
+from itertools import groupby
 
-/*
-    * File:
-        main_I2C_master.c
-    * Author:
-        mar
-    *
-    * Created on 8 mars 2017, 10:
-        58
-    */
+def Postgres(user, db):
 
+     conn = psycopg2.connect("dbname='{}' user='{}' host='localhost'".format(db, user))
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <xc.h>
-# include <p18cxxx.h>
-# include <pic18f8722.h>
-# include <stdlib.h>
-# include <plib\delays.h>
-# include <plib\adc.h>
-// ----------------------
-// Configuration Hardware
-// ----------------------
+     cursor = conn.cursor()
 
-# pragma config	OSC = HSPLL
-# pragma config	FCMEN = OFF
-# pragma config	IESO = OFF
-# pragma config	PWRT = OFF
-# pragma config	BOREN = OFF
-# pragma config	MCLRE = ON
-# pragma config  WDT = OFF
-# pragma config	LVP = OFF
-# pragma config	XINST = OFF
+     cursor.execute("""
+     CREATE TABLE IF NOT EXISTS provider(
+          id SERIAL PRIMARY KEY NOT NULL,
+          name_society VARCHAR(255),
+          name_shop VARCHAR(255),
+          address VARCHAR(255),
+          city VARCHAR(255)
+     )
+     """)
+     conn.commit()
 
-void write_Arduino(unsigned char address_puce, unsigned char address_reg, unsigned char data)
-void i2c_init()
-void i2c_waitForIdle()
-void i2c_start()
-void i2c_repStart()
-void i2c_stop()
-int i2c_read(unsigned char ack)
-unsigned char i2c_write(unsigned char i2cWriteData)
+     cursor.execute("""
+     CREATE TABLE IF NOT EXISTS product(
+         reference VARCHAR(255),
+          code VARCHAR(255) PRIMARY KEY,
+          height INT,
+          depth INT,
+          width INT,
+          color VARCHAR(255),
+          stock INT,
+          stock_min INT,
+          price FLOAT,
+          piece_per_bloc INT
+     )
+     """)
+     conn.commit()
 
-unsigned char address = 0x12
-
-
-void main(void)
-{
-    i2c_init()
-
-    while(1)
-    {
+     cursor.execute("""
+     CREATE TABLE IF NOT EXISTS customer(
+          id SERIAL PRIMARY KEY NOT NULL,
+          name VARCHAR(255),
+          address VARCHAR(255),
+          phone VARCHAR(255),
+          email VARCHAR(255),
+          password VARCHAR(255)
+     )
+     """)
+     conn.commit()
 
 
-    }
-}
+     cursor.execute("""
+     CREATE TYPE purchase_type AS ENUM ('draft', 'deposit', 'paid', 'closed')
+     """)
+     conn.commit()
 
-void write_Arduino(unsigned char address_puce, unsigned char address_reg, unsigned char data)
-    {
 
-    }
+     cursor.execute("""
+     CREATE TABLE IF NOT EXISTS purchase(
+        id SERIAL PRIMARY KEY NOT NULL,
+          date_order TIMESTAMP,
+          id_customer INT,
+          status purchase_type,
+          price FLOAT,
+          FOREIGN KEY (id_customer)
+          REFERENCES customer(id)
+     )
+     """)
+     conn.commit()
 
-void i2c_init()
-{
-    TRISCbits.RC3 = 1
-    // set SCL pin as input
-    TRISCbits.RC4 = 1
-    // set SDA pin as input
+     cursor.execute("""
+     CREATE TABLE IF NOT EXISTS feature_provider(
+        id SERIAL PRIMARY KEY NOT NULL,
+          id_provider INT,
+          code VARCHAR(255),
+          time_provider INT,
+          price_provider FLOAT,
+          FOREIGN KEY (code)
+          REFERENCES product(code),
+          FOREIGN KEY (id_provider)
+          REFERENCES provider(id)
+     )
+     """)
+     conn.commit()
 
-    SSP1CON1 = 0x38
-    // set I2C master mode
-    SSP1CON2 = 0x00
+     cursor.execute("""
+     CREATE TYPE orderitem_pos AS ENUM ('left', 'right', 'top', 'bottom', 'back', 'front', 'inner')
+     """)
+     conn.commit()
 
-    // 400kHz bus with 10MHz xtal - use 0x0C with 20MHz xtal
-    SSP1ADD = 10
-    // 100k at 4Mhz clock
 
-    SSP1STATbits.CKE = 0
-    // use I2C levels      worked also with '0'
-    SSP1STATbits.SMP = 0
-    // disable slew rate control  worked also with '0'
+     cursor.execute("""
+     CREATE TABLE IF NOT EXISTS orderitem(
+          id SERIAL PRIMARY KEY NOT NULL,
+        id_order INT,
+          nbr_bloc INT,
+          code_product VARCHAR(255),
+          type orderitem_pos,
+          quantity INT,
+          unit_cost FLOAT,
+          FOREIGN KEY (id_order) 
+          REFERENCES purchase(id),
+          FOREIGN KEY (code_product) 
+          REFERENCES product(code)
+     )
+     """)
+     conn.commit()
 
-    PIR1bits.PSPIF = 0
-    // clear SSPIF interrupt flag
-    PIR2bits.BCL1IF = 0
-    // clear bus collision flag
-}
+     cursor.execute("""
+     CREATE TABLE IF NOT EXISTS worker(
+          id SERIAL PRIMARY KEY UNIQUE NOT NULL,
+          name VARCHAR(255),
+          address VARCHAR(255),
+          phone VARCHAR(255),
+          email VARCHAR(255),
+          password VARCHAR(255)
+     )
+     """)
+     conn.commit()
 
-/******************************************************************************************/
+     with open('kitbox.csv') as csvfile:
+          spamreader = csv.reader(csvfile, delimiter=';')
+          csv_doc = list(spamreader)[1:]
+          csvfile.close()
 
-void i2c_waitForIdle()
-{
-    while ((SSP1CON2 & 0x1F) | SSP1STATbits.RW) {}
-    // wait for idle and not writing
-}
+     query = "INSERT INTO product (reference, code, height, depth, width, color, stock, stock_min, price, piece_per_bloc) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
 
-/******************************************************************************************/
+     insert = []
+     for row in csv_doc:
+          insert.append((row[0], row[1], int(row[2]), int(row[3]), int(row[4]), row[5], int(row[6]), int(row[7]), float(row[8].replace(',', '.')), int(row[9])))
 
-void i2c_start()
-{
-    i2c_waitForIdle()
-    SSP1CON2bits.SEN = 1
-}
+     cursor.executemany(query, tuple(insert))
+     conn.commit()
 
-/******************************************************************************************/
+     with open('fournisseurs.txt', 'r') as f:
+          doc = [word.strip() for word in f.readlines()]
+          doc_filtered = list(filter(None, doc))
+          final = [list(g) for k, g in groupby(doc_filtered, lambda x: '------' not in x and 'Fournisseur' not in x) if k]
+          f.close()
 
-void i2c_repStart()
-{
-    i2c_waitForIdle()
-    SSP1CON2bits.RSEN = 1
-}
+     query = "INSERT INTO provider (name_society, name_shop, address, city) VALUES (%s, %s, %s, %s)"
+     insert = []
 
-/******************************************************************************************/
+     for provider in final:
+          insert.append((provider[0], provider[1], provider[2], provider[3]))
 
-void i2c_stop()
-{
-    i2c_waitForIdle()
-    SSP1CON2bits.PEN = 1
-}
+     cursor.executemany(query, tuple(insert))
+     conn.commit()
 
-/******************************************************************************************/
+     query = "INSERT INTO feature_provider (id_provider, code, time_provider, price_provider) VALUES (%s, %s, %s, %s)"
+     insert = []
 
-int i2c_read(unsigned char ack)
-{
-    unsigned char i2cReadData
+     for row in csv_doc:
+          insert.append((1, row[1], int(row[11]), float(row[10].replace(',', '.'))))
+          insert.append((2, row[1], int(row[13]), float(row[12].replace(',', '.'))))
 
-    i2c_waitForIdle()
+     cursor.executemany(query, tuple(insert))
+     conn.commit()
 
-    SSP1CON2bits.RCEN = 1
+if __name__ == '__main__':
 
-    i2c_waitForIdle()
-
-    i2cReadData = SSP1BUF
-
-    i2c_waitForIdle()
-
-    if (ack)
-    {
-        SSP1CON2bits.ACKDT = 0
-    }
-    else
-    {
-        SSP1CON2bits.ACKDT = 1
-    }
-    SSP1CON2bits.ACKEN = 1
-    // send acknowledge sequence
-
-    return(i2cReadData)
-}
-
-/******************************************************************************************/
-
-unsigned char i2c_write(unsigned char i2cWriteData)
-{
-    i2c_waitForIdle()
-    SSP1BUF = i2cWriteData
-
-    return (! SSP1CON2bits.ACKSTAT)
-    // function returns '1' if transmission is acknowledged
-}
-
-/******************************************************************************************/
+    if len(sys.argv) == 3:
+        Postgres(sys.argv[1], sys.argv[2])
+        print("Database ready !")
+    else:
+        print("Number of arguments invalid")
