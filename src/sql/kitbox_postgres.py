@@ -1,3 +1,4 @@
+import sys
 import csv
 import psycopg2
 from itertools import groupby
