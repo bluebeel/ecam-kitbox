@@ -3,8 +3,9 @@ using System.Text;
 
 namespace KitBox
 {
-	public class Customer
+	public class Person
 	{
+		private string role;
 		protected int id;
 		private string name;
 		private string address;
@@ -13,13 +14,21 @@ namespace KitBox
 		// need to implement the hashed password
 		protected string password;
 
-		public Customer(string name, string adress, string phone, string email, string password)
+		public Person(string role, string name, string adress, string phone, string email, string password)
 		{
 			this.Name = name;
 			this.Address = adress;
 			this.Phone = phone;
 			this.Email = email;
-			this.password = password;
+			this.Password = password;
+			this.Role = role;
+		}
+
+		public string Role
+		{
+			get { return this.role; }
+
+			set { this.role = value; }
 		}
 
 		public int Id
