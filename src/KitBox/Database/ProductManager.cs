@@ -10,35 +10,11 @@ namespace KitBox
 	{
 		private NpgsqlConnection connection;
 		private NpgsqlCommand command;
+		private ProductFactory factory = new ProductFactory();
 
 		public ProductManager(NpgsqlConnection conn)
 		{
 			this.connection = conn;
-		}
-
-		public StockProduct GenerateProduct(NpgsqlDataReader reader)
-		{
-			Dimensions specs = new Dimensions((int)reader["width"], (int)reader["height"], (int)reader["depth"]);
-			Color color;
-			switch ((string)reader["color"])
-			{
-				case "Blanc":
-					color = Color.FromArgb(255, 255, 255);
-					break;
-				case "Brun":
-					color = Color.FromArgb(91, 60, 17);
-					break;
-				case "Noir":
-					color = Color.FromArgb(0, 0, 0);
-					break;
-				case "Galvanisé":
-					color = Color.FromArgb(224, 223, 219);
-					break;
-				default:
-					color = new Color();
-					break;
-			}
-			return new StockProduct((string)reader["reference"], (string)reader["code"], specs, color, (int)reader["stock"], (int)reader["stock_min"], (double)reader["price"], (int)reader["piece_per_bloc"]);
 		}
 
 		public StockProduct SelectProduct(string code)
@@ -53,7 +29,7 @@ namespace KitBox
 			NpgsqlDataReader reader = this.command.ExecuteReader();
 			while (reader.Read())
 			{
-				product = GenerateProduct(reader);
+				product = factory.getProduct(reader);
 			}
 			reader.Close();
 			this.connection.Close();
@@ -69,7 +45,7 @@ namespace KitBox
 			List<StockProduct> products = new List<StockProduct>();
 			while (reader.Read())
 			{
-				products.Add(GenerateProduct(reader));
+				products.Add(factory.getProduct(reader));
 			}
 
 			reader.Close();

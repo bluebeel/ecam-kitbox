@@ -29,36 +29,13 @@
   <ItemGroup>
     <Folder Include="Block\" />
     <Folder Include="Block\Pieces\" />
-    <Folder Include="Block\Containers\" />
-    <Folder Include="Block\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Block\Product.cs" />
     <Compile Include="Block\Dimensions.cs" />
-    <Compile Include="Block\Pieces\Door.cs" />
-    <Compile Include="Block\Pieces\Slot.cs" />
-    <Compile Include="Block\Pieces\Panel.cs" />
     <Compile Include="Block\Block.cs" />
-    <Compile Include="Block\Containers\FrontElements.cs" />
-    <Compile Include="Block\Containers\BackElements.cs" />
-    <Compile Include="Block\Containers\SideElements.cs" />
-    <Compile Include="Block\Containers\HorizontalElements.cs" />
-    <Compile Include="Block\Containers\InnerElements.cs" />
-    <Compile Include="Block\Interfaces\IProduct.cs" />
-    <Compile Include="Block\Interfaces\IFrontElement.cs" />
-    <Compile Include="Block\Interfaces\IBackElement.cs" />
-    <Compile Include="Block\Interfaces\ISideElement.cs" />
-    <Compile Include="Block\Interfaces\IHorizontalElement.cs" />
-    <Compile Include="Block\Interfaces\IInnerElement.cs" />
     <Compile Include="Database\Company.cs" />
     <Compile Include="Database\ProductManager.cs" />
     <Compile Include="Database\StockProduct.cs" />
-    <Compile Include="Block\Pieces\Track.cs" />
-    <Compile Include="Block\Pieces\Cleat.cs" />
-    <Compile Include="Block\Pieces\GlassDoor.cs" />
-    <Compile Include="Block\Pieces\ClassicDoor.cs" />
-    <Compile Include="Block\Pieces\TrackOneRail.cs" />
-    <Compile Include="Block\Pieces\TrackTwoRails.cs" />
     <Compile Include="Database\Invoice.cs" />
     <Compile Include="main.cs" />
     <Compile Include="Database\InvoiceManager.cs" />
@@ -67,6 +44,12 @@
     <Compile Include="Database\InvoiceItem.cs" />
     <Compile Include="Database\Person.cs" />
     <Compile Include="Database\PersonManager.cs" />
+    <Compile Include="Block\Pieces\Panel.cs" />
+    <Compile Include="Block\Pieces\Cleat.cs" />
+    <Compile Include="Block\Pieces\Angle.cs" />
+    <Compile Include="Block\Pieces\Door.cs" />
+    <Compile Include="Block\Pieces\Tracks.cs" />
+    <Compile Include="Block\Pieces\ProductFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />

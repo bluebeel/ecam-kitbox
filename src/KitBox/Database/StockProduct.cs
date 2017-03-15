@@ -1,21 +1,33 @@
-﻿using System.Drawing;
+﻿using System;
 
 namespace KitBox
 {
+	public enum ProductType
+	{
+		Panel,
+		Angle,
+		Door,
+		Cleat,
+		Track,
+		Coupelle
+	}
 	public class StockProduct
 	{
-		private string reference;
 		private string code;
 		private Dimensions dimensions;
-		private Color color;
+		private string color;
 		private int stock;
 		private int stockMin;
 		private double price;
 		private int piecePerBloc;
+		private ProductType type;
 
-		public StockProduct(string reference, string code, Dimensions dim, Color color, int stock, int stockMin, double price, int piecepb)
+		/*(ProductType type, string code, Dimensions dim, Color color, int stock, int stockMin, double price, int piecepb) :
+		base(type, code, dim, color, stock, stockMin, price, piecepb)*/
+
+		public StockProduct(ProductType type, string code, Dimensions dim, string color, int stock, int stockMin, double price, int piecepb)
 		{
-			this.reference = reference;
+			this.type = type;
 			this.code = code;
 			this.dimensions = dim;
 			this.color = color;
@@ -25,9 +37,9 @@ namespace KitBox
 			this.piecePerBloc = piecepb;
 		}
 
-		public string Reference
+		public ProductType Type
 		{
-			get { return reference; }
+			get { return type; }
 		}
 
 		public string Code
@@ -40,7 +52,7 @@ namespace KitBox
 			get { return dimensions; }
 		}
 
-		public Color Color
+		public string Color
 		{
 			get { return color; }
 		}

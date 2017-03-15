@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 namespace KitBox
 {
 	public class main
@@ -15,7 +16,7 @@ namespace KitBox
 			foreach (StockProduct product in kitbox.ProductManager.SelectAllProduct())
 			{
 				string productLine = string.Format("{0} - {1} - {2} - {3}",
-												   product.Reference,
+												   product.Type,
 												   product.Code,
 												   product.Stock,
 												   product.StockMin);
@@ -85,8 +86,6 @@ namespace KitBox
 				Console.WriteLine(productLine);
 			}
 			*/
-			switch (
-
 		}
 	}
 }

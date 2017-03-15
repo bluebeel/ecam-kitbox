@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Drawing;
-
 namespace KitBox
 {
-    public abstract class Door : Product, IFrontElement
-    {
-        public Door(decimal price, int width, int height, int depth, Color color) : base(price, width, height, depth, color)
-        {
-        }
-    }
+	public class Door : StockProduct
+	{
+		public Door(ProductType type, string code, Dimensions dim, string color, int stock, int stockMin, double price, int piecepb) :
+		base(type, code, dim, color, stock, stockMin, price, piecepb)
+		{
+		}
+	}
 }
