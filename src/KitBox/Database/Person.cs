@@ -14,6 +14,7 @@ namespace KitBox
 		// need to implement the hashed password
 		protected string password;
 
+
 		public Person(string role, string name, string adress, string phone, string email, string password)
 		{
 			this.Name = name;
@@ -87,7 +88,7 @@ namespace KitBox
 
 
 
-        private string hash(string pswd)
+        static public string hash(string pswd)
         {
             var bytes = new UTF8Encoding().GetBytes(pswd);
             byte[] hashBytes;

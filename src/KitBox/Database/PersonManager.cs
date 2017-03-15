@@ -15,15 +15,21 @@ namespace KitBox
 			this.connection = conn;
 		}
 
-		public Person SelectPerson(string role, string email)
+		public Person SelectPerson(string role, string email, string password)
 		{
 			Person person = null;
-			string select = SelectRole(role);
+			string select;
+			if (role == "customer")
+			{
+				select = "SELECT * FROM \"customer\" WHERE email='" + email + "' AND password='" + Person.hash(password) + "';";
+			}
+			else
+			{
+				select = "SELECT * FROM \"worker\" WHERE email='" + email + "' AND password='" + Person.hash(password) + "';";
+			}
+
 			this.connection.Open();
 			this.command = new NpgsqlCommand(select, this.connection);
-
-			this.command.Parameters.Add(new NpgsqlParameter("email", NpgsqlDbType.Varchar)).Value = email;
-
 			NpgsqlDataReader reader = this.command.ExecuteReader();
 			while (reader.Read())
 			{
@@ -34,6 +40,7 @@ namespace KitBox
 			this.connection.Close();
 
 			return person;
+
 		}
 
 		public Person InsertPerson(Person person)
@@ -53,7 +60,7 @@ namespace KitBox
 			this.connection.Close();
 
 			// Get the id of the person
-			person.Id = SelectPerson(person.Role ,person.Email).Id;
+			person.Id = SelectPerson(person.Role ,person.Email, person.Password).Id;
 
 			return person;
 		}
@@ -75,7 +82,7 @@ namespace KitBox
 
 			this.connection.Close();
 
-			return SelectPerson(person.Role, person.Email);
+			return SelectPerson(person.Role, person.Email, person.Password);
 		}
 
 		public List<Person> SelectAllPerson(string role)
