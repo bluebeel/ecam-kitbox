@@ -5,6 +5,7 @@
 [Oo]bj/
 [Bb]in/
 packages/
+!packages/UnityNpgsql.dll
 TestResults/
 
 # globs
