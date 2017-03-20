@@ -1,55 +1,54 @@
 ﻿using System;
-namespace KitBox
+
+public class Invoice
 {
-	public class Invoice
+	protected int id;
+	private DateTime date;
+	private int userId;
+	private string status;
+	private double price;
+
+	//Add DateTime to the constructor
+	public Invoice(int user, string status, double price)
 	{
-		protected int id;
-		private DateTime date;
-		private int userId;
-		private string status;
-		private double price;
+		this.UserId = user;
+		this.Status = status;
+		this.Price = price;
+	}
 
-		//Add DateTime to the constructor
-		public Invoice(int user, string status, double price)
-		{
-			this.UserId = user;
-			this.Status = status;
-			this.Price = price;
-		}
+	public int Id
+	{
+		get { return this.id; }
 
-		public int Id
-		{
-			get { return this.id; }
+		set { this.id = value; }
+	}
 
-			set { this.id = value; }
-		}
+	public DateTime Date
+	{
+		get { return this.date; }
 
-		public DateTime Date
-		{
-			get { return this.date; }
+		set { this.date = value; }
+	}
 
-			set { this.date = value; }
-		}
+	public int UserId
+	{
+		get { return this.userId; }
 
-		public int UserId
-		{
-			get { return this.userId; }
+		set { this.userId = value; }
+	}
 
-			set { this.userId = value; }
-		}
+	public string Status
+	{
+		get { return this.status; }
 
-		public string Status
-		{
-			get { return this.status; }
+		set { this.status = value; }
+	}
 
-			set { this.status = value; }
-		}
+	public double Price
+	{
+		get { return this.price; }
 
-		public double Price
-		{
-			get { return this.price; }
-
-			set { this.price = value; }
-		}
+		set { this.price = value; }
 	}
 }
+

@@ -1,55 +1,54 @@
 ﻿using System;
-namespace KitBox
+
+public class Provider
 {
-	public class Provider
+	protected int id;
+	private string nameSociety;
+	private string nameShop;
+	private string address;
+	private string city;
+
+	public Provider(string nameSociety, string nameShop, string address, string city)
 	{
-		protected int id;
-		private string nameSociety;
-		private string nameShop;
-		private string address;
-		private string city;
+		this.Society = nameSociety;
+		this.Shop = nameShop;
+		this.Address = address;
+		this.City = city;
+	}
 
-		public Provider(string nameSociety, string nameShop, string address, string city)
-		{
-			this.Society = nameSociety;
-			this.Shop = nameShop;
-			this.Address = address;
-			this.City = city;
-		}
+	public int Id
+	{
+		get { return this.id; }
 
-		public int Id
-		{
-			get { return this.id; }
+		set { this.id = value; }
+	}
 
-			set { this.id = value; }
-		}
+	public string Society
+	{
+		get { return this.nameSociety; }
 
-		public string Society
-		{
-			get { return this.nameSociety; }
+		set { this.nameSociety = value; }
+	}
 
-			set { this.nameSociety = value; }
-		}
+	public string Shop
+	{
+		get { return this.nameShop; }
 
-		public string Shop
-		{
-			get { return this.nameShop; }
+		set { this.nameShop = value; }
+	}
 
-			set { this.nameShop = value; }
-		}
+	public string Address
+	{
+		get { return this.address; }
 
-		public string Address
-		{
-			get { return this.address; }
+		set { this.address = value; }
+	}
 
-			set { this.address = value; }
-		}
+	public string City
+	{
+		get { return this.city; }
 
-		public string City
-		{
-			get { return this.city; }
-
-			set { this.city = value; }
-		}
+		set { this.city = value; }
 	}
 }
+
